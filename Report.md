@@ -52,15 +52,15 @@ Fully connected layer 3: Input 256, Output 3 (action space).
 
 The hyperparameters for tweaking and optimizing the learning algorithm were:
 
-max_t (30000): maximum number of timesteps per episode.    
-BUFFER_SIZE = int(1e6)  replay buffer size
-BATCH_SIZE = 128        minibatch size
-GAMMA = 0.99            discount factor
-TAU = 1e-3              for soft update of target parameters
-LR_ACTOR = 1e-4         learning rate of the actor 
-LR_CRITIC = 1e-4        learning rate of the critic
-WEIGHT_DECAY = 0        L2 weight decay
-GRAD_CLIPPING = 0       Activate gradient clippin in critic.  
+max_t (30000): maximum number of timesteps per episode.      
+BUFFER_SIZE = int(1e6)  replay buffer size  
+BATCH_SIZE = 128        minibatch size  
+GAMMA = 0.99            discount factor  
+TAU = 1e-3              for soft update of target parameters  
+LR_ACTOR = 1e-4         learning rate of the actor   
+LR_CRITIC = 1e-4        learning rate of the critic  
+WEIGHT_DECAY = 0        L2 weight decay  
+GRAD_CLIPPING = 0       Activate gradient clippin in critic.    
 
 # Plot of rewards
 
@@ -76,9 +76,7 @@ It might be useful to experiment with other network architectures for this proje
 
 Increasing the size of the experience replay buffer had a major effect on the performance of the agent, and it might perform better with an even larger buffer. It might also be useful to try implementing prioritized experience replay, instead of a random buffer.
 
-The multi-agent learning algorithms mentioned above would also be applicable to this Unity learning application, and it could be informative to explore their effectiveness at this particular task.
-
-Finally, a very simple change to make would be to raise the target score - say, to 40+ - to more accurately gauge the ability of any agent architecture to learn over time.
+I would like also experimenting with competitive agents instead of collaborating ones, that would mean to create different agent instances for the actors in order to have a competitive play, changes in the rewards should be necessary too, as the reward should be for winning points not only for hittin the ball.
 
 # References
 
